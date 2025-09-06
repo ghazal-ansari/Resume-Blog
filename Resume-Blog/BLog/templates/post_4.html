@@ -1,0 +1,207 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BLOG</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <!-- Font Awesome 5 -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <!-- Custom style -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+</head>
+
+<body>
+
+  <!-- ============================================
+  ===================== HEADER =================== -->
+  <header class="shadow-sm">
+
+    <!-- Logo -->
+    <div class="shadow-sm rounded">
+    </div>
+    <!-- /Logo -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand mr-5" href="{% url 'blog' %}">BLOG</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- menu -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'blog' %}">Home</a>
+            </li>
+
+            <!-- dropdown menu -->
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Blog
+              </a>
+              <div class="dropdown-menu" id="custom-dropdown-menu">
+                <a class="dropdown-item" href="{% url 'post_1' %}">Spider-Man</a>
+                <a class="dropdown-item" href="{% url 'post_2' %}">Batman</a>
+                <a class="dropdown-item" href="{% url 'post_3' %}">Iron Man</a>
+                <a class="dropdown-item" href="{% url 'post_4' %}">Black Widow</a>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'resume' %}">Resume</a>
+            </li>
+          </ul>
+        </div>
+        <!-- /menu -->
+      </div>
+    </nav>
+    <!-- /Navbar -->
+
+  </header>
+
+
+  <!-- ============================================
+  ===================== MAIN =================== -->
+  <main class="py-3 mb-3">
+    <div class="container">
+      <div class="row">
+
+        <!-- POSTS -->
+        <div class="col-md-9">
+          <!-- Title -->
+          <h2>Black Widow</h2>
+          <!-- Author -->
+          <p class="lead">
+            by
+            <a href="{% url 'blog' %}">Qazal Ansari</a>
+          </p>
+          <!-- Date/Time -->
+          <p>Posted on May 29, 2024 at 10:00 AM</p>
+
+          <!-- Preview Image -->
+          <img src="{% static 'images/Black-widow.webp' %}" class="img-fluid rounded" alt="Lego Black Widow">
+          <!-- Post Content -->
+          <p class="lead">
+            Black Widow, also known as Natasha Romanoff, is one of the most compelling and multifaceted characters in
+            the Marvel Universe. Introduced as a former Russian spy and assassin, Natasha's journey from villain to hero
+            is a testament to her strength, resilience, and complexity. Trained from a young age in the brutal Red Room
+            program, she emerges as a highly skilled fighter, master tactician, and expert in espionage. Her
+            transformation into a member of the Avengers underscores her quest for redemption and her desire to use her
+            abilities for good. </p>
+          <p>
+            Scarlett Johansson's portrayal of Black Widow in the Marvel Cinematic Universe has been widely praised for
+            bringing depth and nuance to the character. Johansson's Natasha is a fierce and formidable warrior, yet she
+            also exhibits vulnerability and humanity. Throughout her appearances in films such as "The Avengers,"
+            "Captain America: The Winter Soldier," and "Black Widow," Natasha's character arc reveals her struggle with
+            her past and her efforts to atone for the sins she believes she committed. Her relationships with fellow
+            Avengers, particularly her close bond with Hawkeye and her mentorship of younger heroes, highlight her
+            loyalty and compassion. <img src="images/Black-widow2.webp" class="img-fluid rounded" alt="Lego Panther">
+          <p>
+            Black Widow's legacy is marked by her selfless bravery and her significant contributions to the Avengers'
+            victories. Despite lacking superhuman powers, Natasha's intelligence, agility, and combat skills make her an
+            indispensable member of the team. Her ultimate sacrifice in "Avengers: Endgame" to obtain the Soul Stone and
+            save the universe is a powerful testament to her heroism and unwavering dedication to her friends and the
+            greater good. Black Widow's story is a poignant reminder that true heroism is defined by one's actions and
+            choices, not by their past. </p>
+
+        </div>
+        <!-- /col-md-9 -->
+
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </main>
+
+  <!-- ============================================
+  ===================== FOOTER =================== -->
+  <footer class="border-top">
+    <div class="container">
+
+      <!-- Logo - About - Contact -->
+      <div class="row py-3 text-light">
+
+        <!-- Logo -->
+        <div class="col-md-4">
+          <!-- <img src="logo1.png" class="img-fluid" width="250" draggable="false" alt="Logo"> -->
+        </div>
+
+        <!-- About -->
+        <div class="col-md-4">
+          <h3>About</h3>
+          <p>
+            As a backend programmer with a passion for art, I love exploring how
+            technology and creativity intersect. I enjoy delving into various forms of visual art and design, which
+            helps me think outside the box and approach problems with a fresh perspective.</p>
+        </div>
+
+        <!-- Contact me -->
+        <div class="col-md-4">
+          <h3>Contact me</h3>
+          <p>
+            If you are interested in working with me or just want to say hello simply write on email.
+            <br><strong>Email: <a href="mailto:ghazalteen2007@gmail.com"
+                class="text-white">ghazalteen2007@gmail.com</a></strong>
+          </p>
+
+        </div>
+        <!-- /contact me -->
+      </div>
+      <!-- /Logo - About - Contact -->
+
+      <!-- Social icons -->
+      <p class="lead text-center text-light">FOLLOW ME ON THE WEB</p>
+      <div class="row mb-3 justify-content-center">
+        <a href="https://t.me/QazalAnsari" role="button">
+          <i class="fab fa-telegram fa-lg"></i>
+        </a>
+        <a href="https://github.com/ghazal-ansari" role="button">
+          <i class="fab fa-github fa-lg"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/ghazal-ansari-327877311/" role="button">
+          <i class="fab fa-linkedin-in fa-lg"></i>
+        </a>
+        <a href="https://pinterest.com" role="button">
+          <i class="fab fa-pinterest-p fa-lg"></i>
+        </a>
+      </div>
+      <div class="row py-3 d-flex justify-content-center border-top">
+      </div>
+
+
+    </div>
+    <!-- /container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <!-- jQuery.js -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <!-- Popper.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap.min.js -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
